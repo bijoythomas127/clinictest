@@ -52,11 +52,11 @@
             <tbody>
                 <?php while ($row = $result->fetch_assoc()) { ?>
                 <tr>
-                    <td><?php echo date('Y-m-d', strtotime($row['created_at'])); ?></td>
+                    <td><?php echo date('d-m-Y', strtotime($row['created_at'])); ?></td>
                     <td><?php echo htmlspecialchars($row['first_name']); ?></td>
                     <td><?php echo htmlspecialchars($row['surname']); ?></td>
                     <td><?php echo calculateAge($row['dob']); ?></td>
-                    <td><?php echo date('Y-m-d', strtotime($row['dob'])); ?></td>
+                    <td><?php echo date('d-m-Y', strtotime($row['dob'])); ?></td>
                     <td><?php echo intval($row['total_score']); ?></td>
                 </tr>
                 <?php } ?>
